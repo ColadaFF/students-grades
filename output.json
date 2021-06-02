@@ -1,0 +1,14 @@
+{
+  "student": {
+    "name": {
+      "value": "David"
+    },
+    "lastName": {
+      "value": "Gomez"
+    },
+    "identificationType": "CC",
+    "identificationNumber": {
+      "value": "1111111111"
+    }
+  }
+}
