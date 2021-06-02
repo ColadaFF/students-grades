@@ -1,4 +1,4 @@
-package co.com.ias.learning.students.commons;
+package co.com.ias.learning.students.application.commons;
 
 public class StringUtils {
 

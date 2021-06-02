@@ -1,6 +1,6 @@
-package co.com.ias.learning.students.commons;
+package co.com.ias.learning.students.application.commons;
 
-import static co.com.ias.learning.students.commons.StringUtils.nonBlank;
+import static co.com.ias.learning.students.application.commons.StringUtils.nonBlank;
 
 public class NonEmptyString {
     private final String value;

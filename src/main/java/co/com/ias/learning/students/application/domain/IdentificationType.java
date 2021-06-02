@@ -1,4 +1,4 @@
-package co.com.ias.learning.students.domain;
+package co.com.ias.learning.students.application.domain;
 
 public enum IdentificationType {
     CC,

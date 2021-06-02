@@ -1,7 +1,7 @@
-package co.com.ias.learning.students.domain;
+package co.com.ias.learning.students.application.domain;
 
-import co.com.ias.learning.students.commons.NonEmptyString;
-import co.com.ias.learning.students.commons.Validate;
+import co.com.ias.learning.students.application.commons.NonEmptyString;
+import co.com.ias.learning.students.application.commons.Validate;
 
 public class Student {
     private final NonEmptyString name;

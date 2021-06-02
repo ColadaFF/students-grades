@@ -1,4 +1,4 @@
-package co.com.ias.learning.students.errors;
+package co.com.ias.learning.students.application.errors;
 
 public class InputDataError extends RuntimeException {
     private final String message;

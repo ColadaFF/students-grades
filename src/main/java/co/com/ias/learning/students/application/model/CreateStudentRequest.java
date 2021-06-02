@@ -1,8 +1,10 @@
-package co.com.ias.learning.students.model;
+package co.com.ias.learning.students.application.model;
+
+import co.com.ias.learning.students.application.commons.operation.ApplicationRequest;
 
 import java.util.Objects;
 
-public class CreateStudentRequest {
+public class CreateStudentRequest implements ApplicationRequest {
     private String name;
     private String lastName;
     private String idNumber;

@@ -1,8 +1,9 @@
-package co.com.ias.learning.students.model;
+package co.com.ias.learning.students.application.model;
 
-import co.com.ias.learning.students.domain.Student;
+import co.com.ias.learning.students.application.commons.operation.ApplicationResponse;
+import co.com.ias.learning.students.application.domain.Student;
 
-public class CreateStudentResponse {
+public class CreateStudentResponse implements ApplicationResponse {
     private final Student student;
 
     public CreateStudentResponse(Student student) {
