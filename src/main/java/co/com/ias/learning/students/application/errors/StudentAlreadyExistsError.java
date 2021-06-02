@@ -1,16 +1,41 @@
 package co.com.ias.learning.students.application.errors;
 
+import co.com.ias.learning.students.application.commons.errors.ApplicationError;
+import co.com.ias.learning.students.application.commons.errors.HttpStatusCode;
 import co.com.ias.learning.students.application.domain.IdentificationNumber;
 
-public class StudentAlreadyExistsError extends RuntimeException {
+import java.util.Map;
+
+public class StudentAlreadyExistsError extends ApplicationError {
     private final IdentificationNumber idNumber;
 
     public StudentAlreadyExistsError(IdentificationNumber idNumber) {
-        super("The student with id number : " + idNumber.getValue() + " already exists.");
         this.idNumber = idNumber;
     }
 
     public IdentificationNumber getIdNumber() {
         return idNumber;
+    }
+
+    @Override
+    public String getMessage() {
+        return "The student with id number: " + idNumber.getValue() + " already exists.";
+    }
+
+    @Override
+    public String errorCode() {
+        return "STUDENT_ALREADY_EXISTS_ERROR";
+    }
+
+    @Override
+    public HttpStatusCode httpStatusCode() {
+        return HttpStatusCode.BAD_REQUEST;
+    }
+
+    @Override
+    public Map<String, Object> metadata() {
+        return Map.of(
+                "idNumber", idNumber
+        );
     }
 }

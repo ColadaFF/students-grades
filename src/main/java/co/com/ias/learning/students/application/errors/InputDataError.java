@@ -1,10 +1,12 @@
 package co.com.ias.learning.students.application.errors;
 
-public class InputDataError extends RuntimeException {
+import co.com.ias.learning.students.application.commons.errors.ApplicationError;
+import co.com.ias.learning.students.application.commons.errors.HttpStatusCode;
+
+public class InputDataError extends ApplicationError {
     private final String message;
 
     public InputDataError(String message) {
-        super(message);
         this.message = message;
     }
 
@@ -12,4 +14,15 @@ public class InputDataError extends RuntimeException {
     public String getMessage() {
         return message;
     }
+
+    @Override
+    public String errorCode() {
+        return "INPUT_DATA_ERROR";
+    }
+
+    @Override
+    public HttpStatusCode httpStatusCode() {
+        return HttpStatusCode.BAD_REQUEST;
+    }
+
 }
