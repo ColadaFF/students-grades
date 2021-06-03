@@ -5,6 +5,7 @@ import co.com.ias.learning.students.application.ports.in.ListStudentsUseCase;
 import co.com.ias.learning.students.application.ports.out.StudentsRepository;
 import co.com.ias.learning.students.application.services.CreateStudentService;
 import co.com.ias.learning.students.application.services.ListStudentsService;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -20,7 +21,7 @@ public class StudentsApplicationConfiguration {
 
     @Bean
     public ListStudentsUseCase listStudentsUseCase(
-            StudentsRepository repository
+            @Qualifier("sql") StudentsRepository repository
     ) {
         return new ListStudentsService(repository);
     }
