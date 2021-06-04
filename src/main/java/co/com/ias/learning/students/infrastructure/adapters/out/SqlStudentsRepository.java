@@ -61,9 +61,9 @@ public class SqlStudentsRepository implements StudentsRepository {
     }
 
     @Override
-    public Collection<Student> listStudents() {
-        final String sql = "SELECT * FROM STUDENTS";
-        return jdbcTemplate.query(sql, studentRowMapper);
+    public Collection<Student> listStudents(int limit, int skip) {
+        final String sql = "SELECT * FROM STUDENTS LIMIT ? OFFSET = ?";
+        return jdbcTemplate.query(sql, studentRowMapper, limit, skip);
     }
 
 

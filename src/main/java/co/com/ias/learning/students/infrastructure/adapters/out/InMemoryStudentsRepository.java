@@ -23,7 +23,8 @@ public class InMemoryStudentsRepository implements StudentsRepository {
     }
 
     @Override
-    public Collection<Student> listStudents() {
+    public Collection<Student> listStudents(int limit, int skip) {
         return database.values();
     }
+    
 }

@@ -12,5 +12,5 @@ public interface StudentsRepository {
 
     void storeStudent(Student student);
 
-    Collection<Student> listStudents();
+    Collection<Student> listStudents(int limit, int skip);
 }

@@ -17,7 +17,10 @@ public class ListStudentsService implements ListStudentsUseCase {
 
     @Override
     public ListStudentsResponse execute(ListStudentsRequest request) {
-        Collection<Student> students = repository.listStudents();
+        Collection<Student> students = repository.listStudents(
+                request.getLimit(),
+                request.getSkip()
+        );
         return new ListStudentsResponse(students);
     }
 }

@@ -24,10 +24,15 @@ public class StudentsController {
     }
 
     @GetMapping
-    public ResponseEntity listStudentsHandler() {
+    public ResponseEntity listStudentsHandler(
+            @RequestParam(name = "limit", defaultValue = "10") String limit,
+            @RequestParam(name = "skip", defaultValue = "0") String skip
+    ) {
+        Integer limitInt = Integer.parseInt(limit, 10);
+        Integer skipInt = Integer.parseInt(skip, 10);
         return useCaseHttpExecutor.executeUseCase(
                 listStudentsUseCase,
-                new ListStudentsRequest()
+                new ListStudentsRequest(limitInt, skipInt)
         );
     }
 

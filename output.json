@@ -1,14 +1,10 @@
 {
-  "student": {
-    "name": {
-      "value": "David"
-    },
-    "lastName": {
-      "value": "Gomez"
-    },
-    "identificationType": "CC",
-    "identificationNumber": {
-      "value": "1111111111"
-    }
-  }
+  "listId": "1316401059326197772",
+  "count": 20,
+  "cursor": "HBaAwLjJ86bC7yYAAA==",
+  "withTweetResult": true,
+  "withReactions": false,
+  "withUserResults": false,
+  "withNonLegacyCard": true,
+  "withBirdwatchPivots": false
 }
