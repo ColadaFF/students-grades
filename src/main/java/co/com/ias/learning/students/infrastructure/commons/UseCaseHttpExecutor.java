@@ -1,9 +1,9 @@
 package co.com.ias.learning.students.infrastructure.commons;
 
-import co.com.ias.learning.students.application.commons.errors.ApplicationError;
-import co.com.ias.learning.students.application.commons.operation.ApplicationRequest;
-import co.com.ias.learning.students.application.commons.operation.ApplicationResponse;
-import co.com.ias.learning.students.application.commons.operation.ApplicationUseCase;
+import co.com.ias.learning.commons.errors.ApplicationError;
+import co.com.ias.learning.commons.operation.ApplicationRequest;
+import co.com.ias.learning.commons.operation.ApplicationResponse;
+import co.com.ias.learning.commons.operation.ApplicationUseCase;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;

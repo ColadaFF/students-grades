@@ -1,7 +1,7 @@
 package co.com.ias.learning.students.application.domain;
 
-import co.com.ias.learning.students.application.commons.NonEmptyString;
-import co.com.ias.learning.students.application.commons.Validate;
+import co.com.ias.learning.commons.NonEmptyString;
+import co.com.ias.learning.commons.Validate;
 
 import java.util.UUID;
 

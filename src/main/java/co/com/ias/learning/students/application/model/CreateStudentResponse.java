@@ -1,6 +1,6 @@
 package co.com.ias.learning.students.application.model;
 
-import co.com.ias.learning.students.application.commons.operation.ApplicationResponse;
+import co.com.ias.learning.commons.operation.ApplicationResponse;
 import co.com.ias.learning.students.application.domain.Student;
 
 public class CreateStudentResponse implements ApplicationResponse {

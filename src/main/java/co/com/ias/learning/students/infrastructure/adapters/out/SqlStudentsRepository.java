@@ -1,6 +1,6 @@
 package co.com.ias.learning.students.infrastructure.adapters.out;
 
-import co.com.ias.learning.students.application.commons.NonEmptyString;
+import co.com.ias.learning.commons.NonEmptyString;
 import co.com.ias.learning.students.application.domain.IdentificationNumber;
 import co.com.ias.learning.students.application.domain.IdentificationType;
 import co.com.ias.learning.students.application.domain.Student;
@@ -64,6 +64,12 @@ public class SqlStudentsRepository implements StudentsRepository {
     public Collection<Student> listStudents(int limit, int skip) {
         final String sql = "SELECT * FROM STUDENTS LIMIT ? OFFSET ?";
         return jdbcTemplate.query(sql, studentRowMapper, limit, skip);
+    }
+
+    @Override
+    public Integer countStudents() {
+        String sql = "select count(*) from STUDENTS";
+        return jdbcTemplate.queryForObject(sql, Integer.class);
     }
 
 

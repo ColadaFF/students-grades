@@ -1,4 +1,4 @@
-package co.com.ias.learning.students.application.commons.errors;
+package co.com.ias.learning.commons.errors;
 
 public enum HttpStatusCode {
     BAD_REQUEST(400),

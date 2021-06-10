@@ -21,6 +21,7 @@ public class ListStudentsService implements ListStudentsUseCase {
                 request.getLimit(),
                 request.getSkip()
         );
-        return new ListStudentsResponse(students);
+        Integer total = repository.countStudents();
+        return new ListStudentsResponse(students, total);
     }
 }

@@ -1,6 +1,6 @@
 package co.com.ias.learning.students.application.model;
 
-import co.com.ias.learning.students.application.commons.operation.ApplicationRequest;
+import co.com.ias.learning.commons.operation.ApplicationRequest;
 
 import java.util.Objects;
 

@@ -1,6 +1,6 @@
 package co.com.ias.learning.students.infrastructure.codecs.json;
 
-import co.com.ias.learning.students.application.commons.NonEmptyString;
+import co.com.ias.learning.commons.NonEmptyString;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;

@@ -1,7 +1,7 @@
 package co.com.ias.learning.students.application.domain;
 
-import co.com.ias.learning.students.application.commons.StringUtils;
-import co.com.ias.learning.students.application.commons.Validate;
+import co.com.ias.learning.commons.StringUtils;
+import co.com.ias.learning.commons.Validate;
 
 import java.util.Objects;
 import java.util.regex.Pattern;

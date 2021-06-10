@@ -1,7 +1,7 @@
 package co.com.ias.learning.students.application.errors;
 
-import co.com.ias.learning.students.application.commons.errors.ApplicationError;
-import co.com.ias.learning.students.application.commons.errors.HttpStatusCode;
+import co.com.ias.learning.commons.errors.ApplicationError;
+import co.com.ias.learning.commons.errors.HttpStatusCode;
 
 import java.util.Map;
 

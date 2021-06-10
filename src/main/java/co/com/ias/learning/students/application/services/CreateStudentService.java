@@ -1,6 +1,6 @@
 package co.com.ias.learning.students.application.services;
 
-import co.com.ias.learning.students.application.commons.NonEmptyString;
+import co.com.ias.learning.commons.NonEmptyString;
 import co.com.ias.learning.students.application.domain.IdentificationNumber;
 import co.com.ias.learning.students.application.domain.IdentificationType;
 import co.com.ias.learning.students.application.domain.Student;

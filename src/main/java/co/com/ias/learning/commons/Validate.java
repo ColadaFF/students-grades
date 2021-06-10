@@ -1,4 +1,4 @@
-package co.com.ias.learning.students.application.commons;
+package co.com.ias.learning.commons;
 
 public class Validate {
 
