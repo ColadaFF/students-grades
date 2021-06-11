@@ -2,6 +2,7 @@ package co.com.ias.learning.students.infrastructure.codecs.json;
 
 import co.com.ias.learning.commons.NonEmptyString;
 import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationContext;
@@ -28,7 +29,9 @@ public class NonEmptyStringJsonCodec {
         @Override
         public NonEmptyString deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException, JsonProcessingException {
             final String valueAsString = jsonParser.getValueAsString();
-            return new NonEmptyString(valueAsString);
+            return NonEmptyString.parse(valueAsString, jsonParser.currentName())
+                    .mapError(error -> new JsonParseException(jsonParser, error.getErrorMessage()))
+                    .get();
         }
     }
 

@@ -28,7 +28,7 @@ public class IdentificationNumberCodec {
         @Override
         public IdentificationNumber deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException, JsonProcessingException {
             final String valueAsString = jsonParser.getValueAsString();
-            return new IdentificationNumber(valueAsString);
+            return IdentificationNumber.parse(valueAsString, "inputData").get();
         }
     }
 

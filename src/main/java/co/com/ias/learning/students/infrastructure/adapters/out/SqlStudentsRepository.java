@@ -1,8 +1,6 @@
 package co.com.ias.learning.students.infrastructure.adapters.out;
 
-import co.com.ias.learning.commons.NonEmptyString;
 import co.com.ias.learning.students.application.domain.IdentificationNumber;
-import co.com.ias.learning.students.application.domain.IdentificationType;
 import co.com.ias.learning.students.application.domain.Student;
 import co.com.ias.learning.students.application.ports.out.StudentsRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -74,13 +72,12 @@ public class SqlStudentsRepository implements StudentsRepository {
 
 
     private static Student fromResultSet(ResultSet rs) throws SQLException {
-        return new Student(
-                new NonEmptyString(rs.getString("NAME")),
-                new NonEmptyString(rs.getString("LAST_NAME")),
-                IdentificationType.valueOf(rs.getString("ID_TYPE")),
-                new IdentificationNumber(rs.getString("ID_NUMBER"))
-
-        );
+        return Student.parseStudent(
+                rs.getString("NAME"),
+                rs.getString("LAST_NAME"),
+                rs.getString("ID_TYPE"),
+                rs.getString("ID_NUMBER")
+        ).get();
     }
 
 }
