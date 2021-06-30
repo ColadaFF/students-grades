@@ -21,7 +21,7 @@ public class DataSourceConfiguration {
 
 
     @Bean
-    @Profile("local")
+    @Profile("default")
     public DataSource dataSource() {
         return new EmbeddedDatabaseBuilder()
                 .setType(EmbeddedDatabaseType.H2)
